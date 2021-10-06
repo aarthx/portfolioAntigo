@@ -1,7 +1,8 @@
 body {
     margin: 0;
-    background-image: linear-gradient(to bottom, #f4a261, #f1965b, #ee8957, #eb7c53, #e76f51);
+    font-family: 'Acme', sans-serif;
 }
+
 
 .links {
     margin-bottom: 0px;
@@ -20,12 +21,11 @@ body {
     opacity: 90%;
 }
 
-.barra-azul {
+.barra-preta {
     display: block;
     background-color: black;
     width: 100%;
     height: 5px;
-
 }
 
 .links img {
@@ -56,18 +56,80 @@ body {
     transform: rotateZ(-10deg);
     filter:brightness(130%);
     box-shadow: 5px 5px 5px black;
+    cursor: pointer;
+}
+
+@-webkit-keyframes slide-in-blurred-left {
+  0% {
+    -webkit-transform: translateX(-1000px) scaleX(2.5) scaleY(0.2);
+            transform: translateX(-1000px) scaleX(2.5) scaleY(0.2);
+    -webkit-transform-origin: 100% 50%;
+            transform-origin: 100% 50%;
+    -webkit-filter: blur(40px);
+            filter: blur(40px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(0) scaleY(1) scaleX(1);
+            transform: translateX(0) scaleY(1) scaleX(1);
+    -webkit-transform-origin: 50% 50%;
+            transform-origin: 50% 50%;
+    -webkit-filter: blur(0);
+            filter: blur(0);
+    opacity: 1;
+  }
+}
+@keyframes slide-in-blurred-left {
+  0% {
+    -webkit-transform: translateX(-1000px) scaleX(2.5) scaleY(0.2);
+            transform: translateX(-1000px) scaleX(2.5) scaleY(0.2);
+    -webkit-transform-origin: 100% 50%;
+            transform-origin: 100% 50%;
+    -webkit-filter: blur(40px);
+            filter: blur(40px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(0) scaleY(1) scaleX(1);
+            transform: translateX(0) scaleY(1) scaleX(1);
+    -webkit-transform-origin: 50% 50%;
+            transform-origin: 50% 50%;
+    -webkit-filter: blur(0);
+            filter: blur(0);
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fade-out {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes fade-out {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
 }
 
 .sobre-mim {
     display: none;
+    position: relative;
     flex-direction: row;
     justify-content: center;
     color: white;
+    right: 250px;
+    top: 50px;
 }
 
 .sobre-mim p {
     font-size: 20px;
-    width: 350px;
+    width: 400px;
 }
 
 .sobre-mim h2 {
@@ -82,8 +144,8 @@ body {
               transform: translateX(0) rotateZ(-10deg);
     }
     100% {
-      -webkit-transform: translateX(-400px);
-              transform: translateX(-400px);
+      -webkit-transform: translateX(-300px);
+              transform: translateX(-300px);
     }
   }
   @keyframes slide-left {
@@ -92,15 +154,15 @@ body {
               transform: translateX(0) rotateZ(-10deg);
     }
     100% {
-      -webkit-transform: translateX(-400px);
-              transform: translateX(-400px);
+      -webkit-transform: translateX(-300px);
+              transform: translateX(-300px);
     }
   }
 
 @-webkit-keyframes slide-right {
     0% {
-      -webkit-transform: translateX(-400px);
-              transform: translateX(-400px);
+      -webkit-transform: translateX(-300px);
+              transform: translateX(-300px);
     }
     100% {
       -webkit-transform: translateX(0) rotateZ(-10deg);
@@ -109,8 +171,8 @@ body {
   }
   @keyframes slide-right {
     0% {
-      -webkit-transform: translateX(-400px);
-              transform: translateX(-400px);
+      -webkit-transform: translateX(-300px);
+              transform: translateX(-300px);
     }
     100% {
       -webkit-transform: translateX(0) rotateZ(-10deg);
@@ -121,4 +183,59 @@ body {
 .foto:active {
     box-shadow: none;
     transform: slide-right 0.5s both;
+}
+
+h1 {
+  color: #E9C46A;
+  letter-spacing: 10px;
+  font-weight: bolder;
+  font-style: italic;
+  font-size: 50px;
+  margin: 0px 75px;
+  padding: 15px 0px;
+}
+
+.desafio-js {
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  width: 300px;
+  height: 150px;
+  border-radius: 100px;
+  margin: 10px 40px;
+  box-shadow: 5px 5px 5px black;
+  cursor: pointer;
+}
+
+.desafio-js:active {
+  box-shadow: none;
+}
+
+.projetos {
+  background-image: linear-gradient(to bottom, #f4a261, #f1965b, #ee8957, #eb7c53, #e76f51);
+  padding: 0px 0px 10px 0px;
+}
+
+.projetos a {
+  display: inline-flex;
+  width: 300px;
+  flex-direction: row;
+  justify-content: center;
+  text-align: center;
+  text-decoration: none;
+  border: solid 2px black;
+  border-radius: 80px 10px 10px;
+  font-size: 25px;
+  color: black;
+  background-color: #E9C46A;
+  font-weight: 600;
+}
+
+.projetos ul {
+  display: none;
+}
+
+.projetos li {
+  list-style-type: none;
+  margin-bottom: 10px;
 }
