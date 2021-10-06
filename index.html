@@ -5,6 +5,7 @@
     <title>Arthur Augusto</title>
     <link rel="icon" type="imagem/png" href="img/favicon.png">
     <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
 </head>
 
 <body>
@@ -21,15 +22,24 @@
     </header>
     <div class="barra-azul"></div>
     <div class="fundo-foto">
-        <img src="img/avatar.jpg" type="imagem/jpg" class="foto">   
+        <img src="img/avatar.jpg" type="imagem/jpg" class="foto" id="foto" onclick="fotoSlide();"> 
+        <div class="sobre-mim" id="sobreMim">
+            <h2>Sobre Mim</h2> 
+            <p>Meu nome é Arthur Augusto, sou estudante de Engenharia Civil e no momento
+                estudando bastante desenvolvimento Web e em busca de terminar um desafio 
+                de ideias básicas de app JS
+        </div> 
     </div>
     <div class="barra-azul"></div>
 
-    <div>
-        Desafio JS App Ideas: <br>
+    <div class="projetos">
+        <h2>Projetos</h2>
+        <div>
+             Desafio JS App Ideas: <br>
         <a href="https://aarthx.github.io/pomodoroTimer">Timer Pomodoro</a> <br>
         <a href="https://aarthx.github.io/flipImage/">Flipador de Imagens</a> <br>
-        <a href="https://aarthx.github.io/geradorDeNumeros/">Sorteador de número</a> 
+        <a href="https://aarthx.github.io/geradorDeNumeros/">Sorteador de número</a>
+        </div>
     </div>
 </body>
 </html>
