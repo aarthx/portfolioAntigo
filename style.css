@@ -123,24 +123,24 @@ body {
   }
 }
 
+/*Ainda não funcionando bem em mobiles*/
 .sobre-mim {
     display: none;
-    position: relative;
+    position: absolute;
     flex-direction: row;
     justify-content: center;
     color: white;
-    right: 250px;
-    top: 50px;
+    margin: 3% auto auto 45%;
 }
 
 .sobre-mim p {
-    font-size: 25px;
-    width: 450px;
+    font-size: 150%;
+    width: 50%;
 }
 
 .sobre-mim h2 {
-    font-size: 30px;
-    width: 450px;
+    font-size: 150%;
+    width: 50%;
 }
 
 
