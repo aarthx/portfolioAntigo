@@ -244,9 +244,15 @@ h1 {
 
 .projetos ul {
   display: none;
+  flex-direction: column;
+  justify-content: baseline;
 }
 
 .projetos li {
   list-style-type: none;
   margin-bottom: 10px;
+}
+
+.projetos a:hover {
+  background-color: #ac8b37;
 }
